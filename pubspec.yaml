@@ -24,7 +24,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - asset/img
+    - asset/img/
 
   fonts:
     - family: parisienne
