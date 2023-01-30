@@ -18,6 +18,28 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'D-Day',
           theme: ThemeData(
+            fontFamily: 'sunflower',
+            textTheme: TextTheme(
+              headline1: TextStyle(
+                color: Colors.white,
+                fontSize: 70.sp,
+                fontFamily: 'parisienne',
+              ),
+              headline2: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+                fontSize: 45.sp,
+              ),
+              bodyText1: TextStyle(
+                color: Colors.black,
+                fontSize: 25.sp,
+              ),
+              bodyText2: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w700,
+                fontSize: 20.sp,
+              ),
+            ),
             primarySwatch: Colors.blue,
           ),
           home: const HomeScreen(),

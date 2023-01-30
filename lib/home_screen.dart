@@ -82,6 +82,9 @@ class _TopPart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // context를 가져와서 of constructor를 사용하는 클래스들의 특징은 inherited widget이다.
+    final theme = Theme.of(context);
+    final textTheme = theme.textTheme;
     final DateTime today = DateTime.now();
 
     return Expanded(
@@ -90,30 +93,17 @@ class _TopPart extends StatelessWidget {
         children: [
           Text(
             'D-Day',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 70.sp,
-              fontFamily: 'parisienne',
-            ),
+            style: textTheme.headline1,
           ),
           Column(
             children: [
               Text(
-                '우리 처음 만난 날',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25.sp,
-                  fontFamily: 'sunflower',
-                ),
+                'The day we first met',
+                style: textTheme.bodyText1,
               ),
               Text(
                 '${selectedDate.year}.${selectedDate.month}.${selectedDate.day}',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 20.sp,
-                  fontFamily: 'sunflower',
-                ),
+                style: textTheme.bodyText2,
               ),
             ],
           ),
@@ -131,12 +121,7 @@ class _TopPart extends StatelessWidget {
                   today.month,
                   today.day,
                 ).difference(selectedDate).inDays + 1}',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w700,
-              fontSize: 45.sp,
-              fontFamily: 'sunflower',
-            ),
+            style: textTheme.headline2,
           ),
         ],
       ),
